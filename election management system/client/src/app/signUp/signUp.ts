@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { VoteService } from '../vote.service';
 import { voterList } from '../voterList';
+import { IsignUp } from './signupInterface';
 @Component
 ({
 	templateUrl  : './signUp.html',
@@ -10,11 +11,19 @@ import { voterList } from '../voterList';
 
 export class signUpComponent
 {
+	voterData : IsignUp[];
 	voters : voterList[];
-	voterData : any[] = [];
+	voteId : String;
+	ssn : number;
+	name : String;
+	phone : number;
+	email : String;
+	address : String;
+	age : number;
+
 	constructor(private router: Router, private newService : VoteService)
 	{
-		this.newService.po
+			
 	}
 
 	submit(voteId, ssn, age, name, email, phone, address)

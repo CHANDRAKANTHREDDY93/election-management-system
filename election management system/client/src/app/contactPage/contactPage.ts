@@ -3,6 +3,6 @@ import { Component } from '@angular/core';
 @Component
 ({
 	templateUrl : './contactPage.html',
-	styleUrle: ['./contactPage.css']
+	styleUrls: ['./contactPage.css']
 })
 export class contactPage{}

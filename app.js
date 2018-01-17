@@ -19,13 +19,13 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use(express.static(__dirname + '/election management system/client/dist'));
+app.use(express.static(__dirname + '/election management system/client/src'));
 
 app.use('/api', route);
 
 //testing server
 app.get('*', function(req, res) {
-	res.sendFile(path.join(__dirname + '/election management system/client/dist/app.index.html'));
+	res.sendFile(path.join(__dirname + '/election management system/client/src/app.index.html'));
 });
 
 
