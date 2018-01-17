@@ -34,3 +34,6 @@ app.all('/', function(req, res, next) {
 app.listen(port, ()=>{
 	console.log("Server started on port" +port)
 })
+app.get('/', function(req, res) {
+	res.sendFile(__dirname + './election management system/client/src/app/index.html');
+});
