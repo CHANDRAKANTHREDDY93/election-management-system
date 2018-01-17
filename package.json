@@ -5,9 +5,10 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app"
+    "start": "node app",
+    "build" : "cd election management system/client && ng build --prod"
   },
-  "author": "",
+  "author": "chandrakanth verlapally",
   "license": "ISC",
   "dependencies": {
     "@angular/cli": "^1.6.3",
@@ -18,5 +19,9 @@
     "mongojs": "^2.4.1",
     "mongoose": "^4.13.9",
     "nodemon": "^1.14.10"
+  },
+    "engines": {
+    "node": "8.9.3",
+    "npm": "5.6.0"
   }
 }

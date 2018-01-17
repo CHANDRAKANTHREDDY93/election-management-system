@@ -10,7 +10,7 @@ const route = require('./routes/route');
 const tasks = require('./routes/index');
 const port = process.env.PORT || 3000;
 
-app.set('views', path.join(__dirname, 'public'));
+app.set('views', path.join(__dirname, './election management system/client/dist'));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
@@ -19,11 +19,14 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/election management system/client/dist'));
 
 app.use('/api', route);
 
 //testing server
+app.get('*', function(req, res) {
+	res.sendFile(path.join(__dirname + '/election management system/client/dist/app.index.html'));
+});
 
 
 app.all('/', function(req, res, next) {
@@ -34,6 +37,3 @@ app.all('/', function(req, res, next) {
 app.listen(port, ()=>{
 	console.log("Server started on port" +port)
 })
-app.get('/', function(req, res) {
-	res.sendFile(__dirname + './election management system/client/src/app/index.html');
-});

@@ -58,7 +58,7 @@ export class VotePageComponent implements OnInit
               }
               else
               {
-                this.newData.forEach((element) 
+                this.newData.forEach((element) =>
                 { 
                 this.isValid = false;
                 if(element.ssn != ssn)
@@ -74,7 +74,7 @@ export class VotePageComponent implements OnInit
                 }
                 else
                 {
-                    console.log("invalid");
+                    alert("Sorry you have already casted your vote. Please logout for security reasons");
                 }
                 });
               }  
