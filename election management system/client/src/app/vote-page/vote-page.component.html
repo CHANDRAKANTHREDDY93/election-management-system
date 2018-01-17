@@ -1,0 +1,68 @@
+<link rel="stylesheet" type="text/css">
+  <div class="row">
+    <div class="col-xs-8 col-md-6 .col-xs-6 .col-md-4">
+  		<div class="media">
+        <div class="media-left">
+          <img src="../../assets/donaldTrump.jpg" class="media-object">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><b>Donald Trump</b></h4>
+             <strong>
+              <ul>
+                <li>What separates the winners from the losers is how a person reacts to each new twist of fate.</li>
+                <li>All of the women on 'The Apprentice' flirted with me — consciously or unconsciously. That's to be expected. </li>
+                <li>A sexual dynamic is always present between people, unless you are asexual.</li>
+                 <li> Sometimes by losing a battle you find a new way to win the war.</li>
+               </ul>
+              </strong>
+        </div>
+      </div>
+          <h3 class="align"><strong>Vote to Republicans Here</strong></h3>
+  	         <label class="checkbox"><strong>
+                <input type="radio" name="vote" value="repVote" (click)= "showButton()" [(ngModel)]="data.vote" name="repVote">Check the box for Republicans</strong>
+              </label>
+    </div>
+      <div class="col-xs-8 col-md-6 .col-xs-6 .col-md-4">
+        <div class="media">
+          <div class="media-body">
+            <h4 class="media-heading"><b>Hillary Clinton</b></h4>
+                <strong>
+                  <ul>
+                  <li>Gay rights are human rights.</li>
+                  <li>I'm not going to have some reporters pawing through our papers.</li>
+                  <li>We are the president. What we have to do... is to find a way to celebrate our diversity and debate our differences without fracturing our communities.</li>
+                  </ul></strong>
+                
+          </div>
+            <div class="media-right">
+              <img src="../../assets/hillaryClinton.jpg" class="media-object">
+            </div>
+        </div>
+            <h3 class="align"><strong>Vote to Democrats here</strong></h3>
+  		    <label class="checkbox"><strong>
+           		<input type="radio" name="vote" value="demoVote" [checked]='true' (click)= "showButton()" [(ngModel)]="data.vote">Check the box for Democrats</strong>
+            </label>
+    </div>
+      <p align="center">
+        <button class="button" data-target="#myModal" data-toggle="modal" class="btn btn-primary" *ngIf="hideButton">Cast My Vote</button><br>
+      </p>	
+  <div id="myModal" class="modal fade" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog">
+        <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" (click)="close()">&times;</button>
+                    <h4 class="modal-title">Please enter your Valid SSN</h4>
+                </div>
+                    <div class="form-group">
+                      <label class="control-label">Enter YOUR SSN</label>
+                      <input type="number" class="form-control" id="inputPassword3" placeholder="Enter your ssn here" name="ssn" value="ssn" [(ngModel)] = "data.ssn" required>
+                    </div>
+              <div class="modal-footer">
+              <button type="button" class="btn btn-default" (click) = "validate(data.vote, data.ssn)">Validate and Vote</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,24 @@
+.len
+{
+	height: 60%;
+}
+h2
+{
+  color: #000000;
+}
+p
+{
+  color: #000000;
+}
+pagination-controls
+{
+	font-weight: bold;
+	font-size: 16px;
+}
+#boxshadow {
+    position: relative;
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    padding: 10px;
+}

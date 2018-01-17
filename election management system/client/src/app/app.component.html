@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container-fluid">
+    <h2><marquee>WELCOME TO UNITED STATES PRESIDENTIAL ELECTIONS</marquee></h2>
+    <div class="row">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="/home-page/home-page" routerLinkActive="active" class="glyphicon glyphicon-home">Home</a></li>
+            <li><a routerLink="/pollingPlaces" routerLinkActive="active" class="glyphicon glyphicon-map-marker">PollingPlaces</a></li>
+            <li><a routerLink="/provisionalBallet" routerLinkActive="active" class="glyphicon glyphicon-lock">ProvisionalBallet</a></li>
+            <li><a routerLink="/contactPage/contactPage" routerLinkActive="active" class="glyphicon glyphicon-earphone">ContactUs</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <li><a class="glyphicon glyphicon-user" routerLink="/signUp/signUp" routerLinkActive="active"><b>SignUp</b></a></li>
+              <li><a class="btn btn-default active" class="glyphicon glyphicon-log-in" data-toggle="modal" data-target="#myModal" (click) = "admin()" routerLinkActive="active"><b>Admin-Login</b></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+</div>
+<router-outlet></router-outlet>

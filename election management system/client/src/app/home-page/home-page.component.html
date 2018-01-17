@@ -1,0 +1,77 @@
+<div class="row">
+  <div class="col-md-5">
+    <form class="form-horizontal text-left">
+      <div class="form-group">
+        <label for="inputEmail3" class="control-label">ENTER YOUR VOTER ID</label>
+        <input type="email" class="form-control" id="inputEmail3" placeholder="Enter your voter id here" [(ngModel)]="data.vId" name="vId" required>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Enter YOUR SSN</label>
+        <input type="password" class="form-control" placeholder="Enter your ssn here" name="ssn" [(ngModel)] = "data.ssn" required>
+      </div>
+      <div class="form-group">
+        <label>Enter your Age</label>
+        <input type="number" class="form-control" placeholder="Enter your age" [(ngModel)] = "data.age" name ="age" required >
+      </div>
+      <div class="form-group">
+        <div class="checkbox">
+          <label>
+          <input type="checkbox"> Remember me
+          <span><a data-toggle="modal" data-target="#myModal1">Forgot vote-id??</a></span>
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default" (click)="onSubmit(data.vId, data.ssn, data.age)">Sign in</button><br>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-7">
+    <div class="col-md-4 responsive">
+      <a href="../assets/pollingPlaces.jpg" target="_blank">
+        <img id="myImg" src="../assets/pollingPlaces.jpg">
+          <div class="caption">
+            <p>Polling Locations</p>
+          </div></a>
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+          <img class="modal-content" id="img01">
+      </div>
+    </div>
+  <div class="col-md-4 responsive">
+    <a href="../assets/provisionalBallot.jpg" target="_blank">
+      <img src="../assets/provisionalBallot.jpg">
+      <div class="caption">
+        <p>Provisional Ballot</p>
+      </div></a>
+  </div>
+  <div class="col-md-4 responsive">
+    <a href="../assets/registration.jpg" target="_blank">
+    <img src="../assets/registration.jpg">
+    <div class="caption">
+    <p routerLink="/signUp/signUp" routerLinkActive="active" routerLink="/signUp/signUp" routerLinkActive="active">Registration</p>
+    </div></a>
+  </div>
+<div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Enter Required Details and check your phone number for O.T.P</h4>
+              <br>
+                <p>Enter your SSN HERE</p>
+                <input type="number" class="form-control" placeholder="Enter your valid ssn">
+                <p>Enter your phone number</p>
+                <input type="number" class="form-control" placeholder="Enter your phone number">
+                <p>Enter your Data of Birth</p>
+                <input type="date" class="form-control" id="exampleInputDOB1" placeholder="Date of Birth">        
+                <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

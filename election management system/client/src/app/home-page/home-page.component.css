@@ -1,0 +1,58 @@
+.form-control
+{
+	width: 60%;
+	padding-left: 10px;
+	position: relative;
+	border-left: 30px;
+	
+}
+.control-label
+{
+	text-align: left;
+}
+.form-group
+{
+	margin-left: 40px;
+}
+span
+{
+	padding-left: 10px;
+}
+img
+{
+	width: 220px;
+	height: 220px;
+}
+p
+{
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
+}
+#menu1
+{
+	margin-bottom: 25px;
+}
+.dropdown
+{
+	margin-left: 330px;
+}
+div.scroll {
+    background-color: #00FFFF;
+    width: 100px;
+    height: 100px;
+    overflow: scroll;
+}
+.modal-header
+{
+	text-align: left;
+}
+p[_ngcontent-c1]
+{
+	text-align: left;
+}
+.form-control[_ngcontent-c1]
+{
+	border-left: none;
+	margin-left: 10px;
+}

@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+body
+{
+	background-image: url('./assets/seattle.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.modal-backdrop.in
+{
+	opacity: .0 !important;
+	z-index: -100;
+}
+footer
+{
+	margin-top: 120px;
+	text-align: center;
+	font-size: 14px;
+}

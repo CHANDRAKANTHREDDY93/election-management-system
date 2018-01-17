@@ -1,0 +1,18 @@
+<div class="len" id="boxshadow">
+<div class="container">
+
+	<div class="col-md-4" *ngFor="let voter of info | paginate: {itemsPerPage: 6, currentPage:page, id: '1'}; let i = index">
+        <h2><a href="#">{{voter.name}}</a></h2>
+        <p>SSN = {{voter.ssn}}</p>
+        <p>EMAIL = {{voter.email}}</p>
+        <p>PHONE ={{voter.phone}}</p>
+        <p>ADDRESS ={{voter.address}}</p>
+        <p><button type="button" class="btn btn-primary">Contact Voter</button></p>
+</div>
+</div>
+<pagination-controls (pageChange)="page = $event" id="1"
+                      maxSize="6"
+                      directionLinks="true"
+                      autoHide="true">
+                </pagination-controls>
+</div>

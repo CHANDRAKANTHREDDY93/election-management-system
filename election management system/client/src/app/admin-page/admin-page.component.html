@@ -1,0 +1,25 @@
+<div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+        <span class="text-left">Admin-Id</span>
+        <input type="text" class="form-control" placeholder="Enter your Admin id here" [(ngModel)]="adminData.adminId">
+      </div>
+    </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <span class="text-left">Password</span>
+          <input type="password" class="form-control" placeholder="Enter your Password here" [(ngModel)] = "adminData.pwd">
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-primary signin" data-dismiss="modal" (click)="adminValid(adminData.adminId, adminData.pwd)">Sign In</button>
+      </div>
+    </div>
+  </div>
+</div>
+  

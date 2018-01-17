@@ -1,0 +1,32 @@
+.checkbox
+{
+	padding-left: 220px;
+	padding-top: 10px;
+	font-size: 18px;
+	font-family: inherit;
+	color: inherit;
+	font-weight: 500;
+
+}
+.align
+{
+	text-align: center;
+	padding-left: 40px;
+}
+h4
+{
+	text-align: center;
+}
+img
+{
+	width: 120px !important;
+}
+.btn-primary
+{
+	float: center !important;
+}
+.ssn
+{
+	width: 60%;
+	text-align: center;
+}
