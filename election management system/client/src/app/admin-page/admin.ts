@@ -9,14 +9,14 @@ import { VoteService } from '../vote.service';
 })
 export class adminComponent
 {
-	adminInfo : any[] = [];
+	adminInfo :any[];
 	isValid : boolean;
+	adminData : any = [{adminId : ' ', pwd : ' '}];
  	constructor(private router: Router, private newService : VoteService){}
-	adminData = {};
 
-	ngOnInit()
+	ngOnInit() : void
 	{
-		this.newService.getData().subscribe(lists => {
+		this.newService.getVoterData().subscribe(lists => {
       this.adminInfo = lists;
       	console.log(this.adminInfo.length);
        });
@@ -31,7 +31,7 @@ export class adminComponent
 				console.log("Valid admin");
 				this.isValid = true;
 				this.router.navigateByUrl('/admin-page/admin-page');
-				}
+			}
 		});
 	}
 }

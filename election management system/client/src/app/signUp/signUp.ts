@@ -11,36 +11,18 @@ import { IsignUp } from './signupInterface';
 
 export class signUpComponent
 {
-	voterData : IsignUp[];
+	voterData : any = {voteId : '', ssn : null, name : '', phone : '', email : '', address : '', age : null};
 	voters : voterList[];
-	voteId : String;
-	ssn : number;
-	name : String;
-	phone : number;
-	email : String;
-	address : String;
-	age : number;
-
-	constructor(private router: Router, private newService : VoteService)
-	{
-			
+	constructor(private router: Router, private newService : VoteService){
 	}
-
-	submit(voteId, ssn, age, name, email, phone, address)
-	{
-		this.voteId = voteId;
-		this.ssn = ssn;
-		this.name = name;
-		this.phone = phone;
-		this.email = email;
-		this.address = address;
-		this.voters = this.voterData;
-		let reqObj = { voteId : this.voteId, ssn : this.ssn, name : this.name, phone : this.phone, email : this.email, address : this.address};
-		this.newService.postVoterData(reqObj).subscribe(votersList =>
+	submit(){
+		this.newService.postVoterData(this.voterData).subscribe(votersList =>
 		{
-			console.log(this.voters);
+			console.log(this.voterData);
 		});
-
+	}
+	close(){
+		this.router.navigateByUrl('/home-page/home-page');
 	}
 	
 }

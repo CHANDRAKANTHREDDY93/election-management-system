@@ -2,17 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { VoteService } from '../vote.service';
 import { VotePageComponent } from '../vote-page/vote-page.component';
 import { Router } from '@angular/router';
-import { Ihomepage } from './homePageInterface';
 @Component
 ({
-	selector: 'my-home',
-	templateUrl : './home-page.component.html',
-	styleUrls: ['./home-page.component.css']
+  selector: 'my-home',
+  templateUrl : './home-page.component.html',
+  styleUrls: ['./home-page.component.css']
 })
 export class homePageComponent implements OnInit 
-{	
+{ 
   voterInfo: any= [];
-  voterData : Ihomepage[];
+  voterData : any = [];
   data : any[] = [];
   isValid : boolean = false;
 

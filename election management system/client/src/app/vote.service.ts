@@ -22,7 +22,6 @@ export class VoteService {
     }
     postData(newTask)
     {
-    console.log(newTask);
         var body = JSON.stringify(newTask);
         var header = new Headers({'Content-Type' : 'application/json'});
         var request = new RequestOptions({method:RequestMethod.Post, headers : header});

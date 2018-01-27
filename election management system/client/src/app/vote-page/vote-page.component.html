@@ -19,7 +19,7 @@
       </div>
           <h3 class="align"><strong>Vote to Republicans Here</strong></h3>
   	         <label class="checkbox"><strong>
-                <input type="radio" name="vote" value="repVote" (click)= "showButton()" [(ngModel)]="data.vote" name="repVote">Check the box for Republicans</strong>
+                <input type="radio" name="vote" value="repVote" (click)= "showButton()" [(ngModel)]="data.myVote" name="repVote">Check the box for Republicans</strong>
               </label>
     </div>
       <div class="col-xs-8 col-md-6 .col-xs-6 .col-md-4">
@@ -40,7 +40,7 @@
         </div>
             <h3 class="align"><strong>Vote to Democrats here</strong></h3>
   		    <label class="checkbox"><strong>
-           		<input type="radio" name="vote" value="demoVote" [checked]='true' (click)= "showButton()" [(ngModel)]="data.vote">Check the box for Democrats</strong>
+           		<input type="radio" name="vote" value="demoVote" [checked]='true' (click)= "showButton()" [(ngModel)]="data.myVote">Check the box for Democrats</strong>
             </label>
     </div>
       <p align="center">
@@ -59,7 +59,7 @@
                       <input type="number" class="form-control" id="inputPassword3" placeholder="Enter your ssn here" name="ssn" value="ssn" [(ngModel)] = "data.ssn" required>
                     </div>
               <div class="modal-footer">
-              <button type="button" class="btn btn-default" (click) = "validate(data.vote, data.ssn)">Validate and Vote</button>
+              <button type="button" class="btn btn-default" (click) = "validate()">Validate and Vote</button>
           </div>
       </div>
     </div>

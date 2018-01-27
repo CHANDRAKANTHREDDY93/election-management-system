@@ -32,7 +32,7 @@
     </div>
     <div class="col-md-4">
       <div class="form-group">
-        <label for="pwd">Phone</label>
+        <label for="number">Phone</label>
         <input type="number" class="form-control" [(ngModel)] = "voterData.phone" value="phone" name="phone">
       </div>
     </div>
@@ -45,7 +45,7 @@
 </form>
 </div>
     <div class="col-md-12 text-center">
-      <button type="submit" class="wrapper btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" (click) = "submit(voterData.voteId, voterData.ssn, voterData.age, voterData.name, voterData.email, voterData.phone, voterData.address)">Submit</button>
+      <button type="submit" class="wrapper btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" (click) = "submit()">Submit</button>
     </div>
   
 <!-- Modal -->
