@@ -2,14 +2,37 @@ h2
 {
 	text-align: center;
 	padding: 5px;
-	font-size: 20px;
+	font-size: 22px;
 	font-weight: bold;
 	font-family: sans-serif;
 }
-
+.glyphicon-home:before
+{
+	padding-right: 5px;
+}
+.glyphicon-map-marker:before
+{
+	padding-right: 5px;
+}
+.glyphicon-lock:before
+{
+	padding-right: 5px;
+}
+.glyphicon-earphone:before
+{
+	padding-right: 5px;
+}
+.glyphicon-user:before
+{
+	padding-right: 5px;
+}
+.glyphicon-log-in:before
+{
+	padding-right: 5px;
+}
 li
 {
-	font-size: 14px;
+	font-size: 18px;
 	color: #000000;
 	font-weight: bold;
 	margin-left: 10px;

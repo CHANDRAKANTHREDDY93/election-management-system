@@ -10,7 +10,11 @@ h3
 p
 {
   color: #000000;
-  font-size: 16px;
+  font-size: 18px;
+}
+.glyphicon-envelope:before
+{
+  padding-right: 10px;
 }
 pagination-controls
 {
